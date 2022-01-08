@@ -1,0 +1,27 @@
+{
+    "name": "docker_web_app",
+    "version": "1.0.0",
+    "description": "Node.js on Docker",
+    "author": "First Last <first.last@example.com>",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "jest-puppeteer": "jest tests/e2e",
+        "test:e2e": "start-server-and-test start http://localhost:8080 jest-puppeteer",
+        "test:integration": "jest tests/integration",
+        "test:unit": "jest tests/unit",
+        "test": "jest tests"
+    },
+    "dependencies": {
+        "axios": "^0.24.0",
+        "express": "^4.16.1"
+    },
+    "devDependencies": {
+        "jest": "^27.4.7",
+        "jest-puppeteer": "^6.0.3",
+        "puppeteer": "^13.0.1",
+        "puppeteer-core": "^13.0.1",
+        "start-server-and-test": "^1.14.0",
+        "supertest": "^6.1.6"
+    }
+}
